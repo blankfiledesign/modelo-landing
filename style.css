@@ -1,0 +1,170 @@
+:root {
+    --red-pantone: hsla(355, 78%, 56%, 1);
+    --honeydew: hsla(105, 55%, 96%, 1);
+    --non-photo-blue: hsla(182, 43%, 76%, 1);
+    --cerulean: hsla(203, 39%, 44%, 1);
+    --berkeley-blue: hsla(215, 50%, 23%, 1);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+/* clases del header */
+.logo {
+    width: 2em;
+    padding: .2em;
+}
+
+#bannertop {
+    background: url(images/banner-top-b-50.jpg);
+    min-height: 100vh;
+    background-color: cornflowerblue;
+}
+/* presentación personal y de la empresa */
+#presentacion {
+    min-height: 50vh;
+}
+
+.empleado {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin: 1em;
+}
+
+/* tabla de conversión de divisas */
+.tags {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.stocks {
+    background-color: white;
+}
+
+/* formulariode cotización y consulta */
+.form-color {
+    background-color: var(--berkeley-blue);
+    color: white;
+    height: fit-content;
+}
+
+.disclaimer {
+    font-size: .7em;
+}
+
+#form-cotizacion {
+    background: url(images/form-cotizacion.jpg) no-repeat center center;
+    min-height: 60vh;
+}
+
+.window {
+    position: absolute;
+    background-color: var(--berkeley-blue);
+    border: 2px solid var(--non-photo-blue);
+    border-radius: .5em;
+    width: fit-content;
+    padding: 0 1em 1em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    top: 30%;
+}
+
+.cupon {
+    background-color: var(--berkeley-blue);
+    color: white;
+    height: fit-content;
+    width: fit-content;
+}
+
+#close-button {
+    all: unset;
+    color: white;
+    margin-left: 95%;
+    margin-bottom: 1em;
+    justify-self: end;
+    width: 1.5em;
+    height: 1.5em;
+    margin-top: 1em;
+    border-radius: .2em;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#close-button:active {
+    background-color: white;
+    color: var(--berkeley-blue);
+}
+
+#imprimePDF {
+    all: unset;
+    background-color: #0d6efd;
+    color: white;
+    width: fit-content;
+    padding: .5em;
+    border-radius: .5em;
+    margin-top: 1em;
+}
+
+#imprimePDF:active {
+    background-color: var(--non-photo-blue);
+}
+/* sección de servicios */
+.servicio img {
+    width: 10em;
+}
+/* formulario de consulta */
+#form-consulta {
+    background: url(images/form-consulta.jpg) no-repeat center bottom;
+    min-height: 60vh;
+}
+/* footer */
+#newsletter {
+    background-color: rgb(240, 240, 240);
+}
+
+.bg-recursos {
+    background-color: var(--berkeley-blue);
+}
+
+.bg-recursos > ul > li > a, .bg-recursos > ul > li > h4 {
+  
+    color: white
+}
+
+.bg-info {
+    background-color: var(--cerulean);
+}
+
+.bg-nosotros {
+    background-color: var(--non-photo-blue);
+}
+
+#copyright {
+    background-color: rgb(48, 47, 47);
+    color: white;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+/* ocultar flechas en input type number*/
+
+/* Chrome, Safari, Edge, Opera, elimina flechas en inputs tipo number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

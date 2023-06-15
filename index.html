@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+
+  <!-- librería de íconos-->
+  <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+  <!-- libreria jquery-->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+  <!-- librería jsPDF -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+
+  <!-- libreria de banderas -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
+
+  <script src="script.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>Fiveller - Home</title>
+
+</head>
+
+<body class="container-fluid">
+
+  <!-- seccion 1 - header + banner principal -->
+
+  <section class="row position-relative" id="bannertop">
+    <nav class="navbar navbar-expand-lg bg-primary position-absolute w-100 top-0" id="navbar">
+      <div class="container-fluid">
+        <img src="images/travel.png" class="img-fluid logo" alt="logo">
+        <a class="navbar-brand text-light ms-3" href="#">Fiveller</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active text-light" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#presentacion">Sobre nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#form-cotizacion">Cotizador</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#presentacion-organizacion">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#form-consulta">Consultas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="col-10 m-auto d-flex justify-content-center align-items-center  position-relative">
+      <div class="position-absolute z-2 text-light text-center">
+        <h1 class="fw-light">ENCUENTRA EL LUGAR PERFECTO PARA TUS VACACIONES</h1>
+        <h3>Viaja a los lugares más reconditos del mundo<br>sin tener que dar vueltas</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- seccion 2 - presentación personal-->
+
+  <section class="row py-5 d-flex justify-content-center align-items-center" id="presentacion">
+    <div class="col-xl-6 col-12 d-flex flex-column justify-content-center align-items-center text-center">
+      <div class="row">
+        <div class="col-10 m-auto">
+          <h1 class="p-3">Somos líderes en atención</h1>
+          <p>Creemos que viajar nos transforma, porque nos permite encontrar la mejor versión de nosotros mismos. Por
+            eso, ofrecemos el mejor servicio de atención personalizada para acompañarte ANTES, DURANTE y DESPUÉS de tu
+            viaje: por chat en la web, por teléfono las 24 H y en más de 100 sucursales en expansión</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-6 py-3 d-flex text-center justify-content-center align-items-center" id="personal">
+      <div class="row d-flex text-center justify-content-center align-items-center">
+        <div class="col-sm-5 col-8 empleado" id="persona1">
+          <p id="p1nombre"></p>
+          <img src="" id="p1foto" alt="">
+          <p id="p1email"></p>
+          <p id="p1comment"></p>
+        </div>
+        <div class="col-sm-5 col-8 empleado" id="persona2">
+          <p id="p2nombre"></p>
+          <img src="" id="p2foto" alt="">
+          <p id="p2email"></p>
+          <p id="p2comment"></p>
+        </div>
+        <div class="col-sm-5 col-8 empleado" id="persona3">
+          <p id="p3nombre"></p>
+          <img src="" id="p3foto" alt="">
+          <p id="p3email"></p>
+          <p id="p3comment"></p>
+        </div>
+        <div class="col-sm-5 col-8 empleado" id="persona4">
+          <p id="p4nombre"></p>
+          <img src="" id="p4foto" alt="">
+          <p id="p4email"></p>
+          <p id="p4comment"></p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- sección 3 - ofertas + tabla con conversiones de moneda -->
+
+  <section class="row bg-body-secondary py-5" id="sales-table">
+    <h2 class="text-center py-3">Nuestras mejores ofertas</h2>
+
+    <div class="col">
+      <div class="row d-flex justify-content-evenly align-items-center">
+        <div class="col-lg-6 col-md-8 col-10">
+          <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/c1 - Israel - Domo de la Roca.jpg" class="d-block w-100" alt="Domo de la Roca">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>I S R A E L</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/c2 - Paris - Museo del Louvre.jpg" class="d-block w-100" alt="Museo del Louvre">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>P A R I S</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/c3 - Malasia - Cuevas de Batu.jpg" class="d-block w-100" alt="Cuevas de Batu">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>M A L A S I A</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/c4 - Brasil - Cristo Redentor.jpg" class="d-block w-100" alt="Cristo Redentor">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>B R A S I L</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/c5 - India - Taj Mahal.jpg" class="d-block w-100" alt="Taj Mahal">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>I N D I A</h5>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tabla cotizacion Dolar -->
+
+        <div class="col-lg-4 col-md-8 col-sm-8 col-10 py-3">
+          <div class="row text-center d-flex justify-content-center">
+            <div class="col-lg-6 col-md-4 col-6">
+              <div class="tags"><span class="fi fi-us flag"></span> USD (Blue)</div>
+              <div class="stocks" id="stock0">-</div>
+            </div>
+            <div class="col-lg-6 col-md-4 col-6">
+              <div class="tags"><span class="fi fi-us flag"></span> USD (Oficial)</div>
+              <div class="stocks" id="stock1">-</div>
+            </div>
+            <div class="col-lg-6 col-md-4 col-6">
+              <div class="tags"><span class="fi fi-br flag"></span> BRL</div>
+              <div class="stocks" id="stock2">-</div>
+            </div>
+
+            <div class="col-lg-6 col-md-4 col-6">
+              <div class="tags"><span class="fi fi-eu flag"></span> EUR</div>
+              <div class="stocks" id="stock3">-</div>
+            </div>
+
+            <div class="col-lg-6 col-md-4 col-6">
+              <div class="tags"><span class="fi fi-jp flag"></span> JPY</div>
+              <div class="stocks" id="stock4">-</div>
+            </div>
+
+            <div class="col-lg-6 col-md-4 col-6">
+              <div class="tags"><span class="fi fi-ru flag"></span> RUB</div>
+              <div class="stocks" id="stock5">-</div>
+            </div>
+          </div>
+          <p class="disclaimer pt-2">Fuente: <a
+              href="https://bluelytics.com.ar/#!/">https://bluelytics.com.ar/#!/</a><br><a
+              href="https://freecurrencyapi.com/">https://freecurrencyapi.com/</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- sección 4 - formulario de cotización -->
+
+  <section class="row py-5 justify-content-evenly align-items-center position-relative" id="form-cotizacion">
+    <h1 class="text-center p-3 px-5">Cotiza tu Paquete de Asistencia al Viajero<br>según tus necesidades</h1>
+
+    <form class="col-lg-6 col-10 p-3 rounded form-color" id="formulario-cotizacion">
+
+      <div class="row">
+        <div class="col-sm-6 col-12 mb-3">
+          <label for="salida" class="form-label w-100">Salida</label>
+          <input type="text" name="salida" id="salida" class="form-control" placeholder="Argentina" value="Argentina"
+            disabled>
+        </div>
+
+        <div class="col mb-3">
+          <label for="destino" class="form-label w-100">Destino</label>
+          <select class="form-select" name="destino" id="destino">
+            <option value="Territorio Nacional" name="Territorio Nacional" selected>Territorio Nacional (ARS100)
+            </option>
+            <option value="América del sur" name="América del sur">América del sur (ARS110)</option>
+            <option value="ACentral" name="América central">América central (ARS150)</option>
+            <option value="ANorte" name="América del norte">América del norte (ARS200)</option>
+            <option value="OAA" name="Oceanía, Asia & África">Oceanía, Asia & África (ARS210)</option>
+            <option value="Europa" name="Europa">Europa (ARS220)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row d-flex" id="cotiza-dia-viajeros-cont">
+
+        <div class="col-3 col-sm-2 col-12">
+          <div class="mb-3">
+            <label for="cotiza-dias" class="form-label w-100">Días *</label>
+            <input type="number" class="form-control" name="cotiza-dias" id="cotiza-dias" required>
+          </div>
+        </div>
+        <div class="col-3 col-sm-5 col-12">
+          <div class="mb-3">
+            <label for="cotiza-viajeros" class="form-label w-100">Cantidad de viajeros *</label>
+            <input type="number" class="form-control" name="cotiza-viajeros" id="cotiza-viajeros" required>
+          </div>
+        </div>
+        <div class="col-3 col-sm-5 col-12">
+          <div class="mb-3">
+            <label for="cotiza-dias" class="form-label w-100">Nivel del pack (por día)</label>
+            <select class="form-select" name="paquete" id="paquete">
+              <option value="Económico" name="Económico" selected>Económico (ARS500)</option>
+              <option value="Turista" name="Turista">Turista (ARS750)</option>
+              <option value="Ejectutivo" name="Ejectutivo">Ejectutivo (ARS1000)</option>
+              <option value="Premium" name="Premium">Premium (ARS1500)</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <p class="disclaimer">Los campos marcados con (*) son obligatorios.<br>Tarifa de destino por día para cada
+          viajero.</p>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <button type="submit" class="btn btn-primary w-100" id="boton-cotizar">Cotizar</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <!-- seccion 5 - presentación de la organización -->
+
+  <section class="row py-5" id="presentacion-organizacion">
+
+    <h1 class="text-center p-3">Nuestros servicios</h1>
+
+    <div class="col-10 m-auto">
+      <div class="row d-flex justify-content-around align-items-center text-center" id="servicios-container">
+        <div class="col-lg-3 col-md-5 col-12 d-flex flex-column justify-content-start align-items-center py-4 servicio">
+          <img src="images/asistencia_viajero.jpg" alt="">
+          <h2 class="py-3">Asistencia al viajero</h2>
+          <p>Si te gusta viajar, nada mejor que hacerlo con la mayor tranquilidad. En Fiveller tenemos los mejores
+            planes de asistencia al viajero para cualquier destino que visites</p>
+        </div>
+        <div class="col-lg-3 col-md-5 col-12 d-flex flex-column justify-content-start align-items-center py-4 servicio">
+          <img src="images/alquiler_auto.jpg" alt="">
+          <h2 class="py-3">Alquiler de vehículos</h2>
+          <p>La mejor forma de conocer una ciudad es en auto, manejando los tiempos a tu manera. En Fiveller contamos
+            con las mejores ofertas en alquiler de autos con las mejores empresas de alquiler: Hertz, Avis, Budget,
+            Alamo y muchas más</p>
+        </div>
+        <div class="col-lg-3 col-md-5 col-12 d-flex flex-column justify-content-start align-items-center py-4 servicio">
+          <img src="images/actividades.jpg" alt="">
+          <h2 class="py-3">Actividades recreativas</h2>
+          <p>¿Queres porbar algo nuevo? En Fiveller te traemos las mejores actividades, paseos, excursiones y tours con
+            promociones para que disfrutes las principales atracciones turísticas de tu próximo destino al máximo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- seccion 6 - formulario de consulta -->
+
+  <section class="row py-5 justify-content-center position-relative" id="form-consulta">
+
+    <h1 class="text-center p-3">Comunícate con nosotros</h1>
+
+    <form class="col-lg-6 col-sm-10 col-10 m-auto p-3 rounded form-color" id="formulario-consulta">
+
+      <div class="row">
+        <div class="col-sm-6 col-12 mb-3">
+          <label for="nombre-consulta" class="form-label w-100">Nombre</label>
+          <input type="text" class="form-control" name="nombre-consulta" id="nombre-consulta">
+        </div>
+        <div class="col mb-3">
+          <label for="email-consulta" class="form-label w-100">Email *</label>
+          <input type="email" class="form-control" name="email-consulta" id="email-consulta" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-sm-3 col mb-3">
+          <label for="cod-area-consulta" class="form-label w-100">Cód. área</label>
+          <input type="number" class="form-control" name="cod-area-consulta" id="cod-area-consulta">
+        </div>
+        <div class="col-sm-9 col-12 mb-3">
+          <label for="tel-consulta" class="form-label w-100">Teléfono *</label>
+          <input type="text" class="form-control" name="tel-consulta" id="tel-consulta" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col mb-3">
+          <label for="mensaje-consulta" class="form-label w-100">Mensaje</label>
+          <textarea class="form-control" id="mensaje-consulta" rows="3"></textarea>
+        </div>
+      </div>
+
+      <div class="row">
+        <p class="disclaimer">Los campos marcados con (*) son obligatorios</p>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <button type="submit" class="btn btn-primary w-100">Enviar</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <!-- seccion 7 - footer con newsletter, mapa del sitio y copyright -->
+  <footer class="row position-relative" id="menu">
+    <div class="col">
+
+      <!--inscripción a la newsletter -->
+
+      <div class="row d-flex justify-content-center align-items-center py-4" id="newsletter">
+        <div class="col-lg-6 col-md-8 col-10 text-center">
+          <div class="row">
+            <div class="col-10 m-auto">
+              <h3>Mantente informado de las últimas novedades, promociones y servicios</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-8 col-10 position-relative py-2" id="newsl-form">
+          <form class="row" action="" id="formulario-newsletter">
+            <div class="col-8 py-2 m-auto">
+              <input type="text" class="form-control" placeholder="Nombre">
+            </div>
+            <div class="col-8 py-2 m-auto">
+              <input type="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="col-8 m-auto py-2">
+              <button type="submit" class="btn btn-primary">Enviar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!--menú del sitio -->
+
+      <div class="row">
+        <div class="col-lg-6 col-md-6 d-flex justify-content-center align-items-center" style="background-color: beige">
+          <div class="row">
+            <div class="col-10 m-auto py-5">
+              <h3>Fiveller</h3>
+              <p>Compará destinos y precios. Elegí tu vuelo, tu hotel y tus actividades para conocer al máximo cada
+                lugar. U optá por un paquete, para que sólo te preocupes por disfrutar con todo resuelto. Organizá cada
+                etapa de tu viaje desde nuestra web o nuestra app, plataformas seguras, intuitivas y fáciles de usar.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+          <div class="row">
+            <div class="col-lg-5 col-md-12 col-sm-4 py-3 bg-recursos">
+              <ul>
+                <li>
+                  <h4>RECURSOS</h4>
+                </li>
+                <li><a
+                    href="https://www.google.com/maps/place/Estadio+del+Centro/@-31.4266179,-64.1884764,14z/data=!4m6!3m5!1s0x943298862510649b:0xe55634a3d4bf8f41!8m2!3d-31.4055043!4d-64.1991236!16s%2Fg%2F1hd_4520b?hl=es"
+                    target="_blank">Mapa del sitio</a></li>
+                <li><a
+                    href="https://api.whatsapp.com/send?phone=+5493521531997&amp;text=Hola, Nececito mas informacion!"
+                    target="_blank">Whatsapp</a></li>
+                <li><a href="#navbarNav">Volver al inicio</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-7 col-md-12 col-sm-4 py-3 bg-info">
+              <ul>
+                <li>
+                  <h4>INFO</h4>
+                </li>
+                <li><a href="#">Santa fe 500 - Córdoba, Argentina</a></li>
+                <li><a href="#">info@fiveller.com</a></li>
+                <li><a href="#">+54 3521531997</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-4 py-3 bg-nosotros">
+              <ul>
+                <li>
+                  <h4>SOBRE NOSOTROS</h4>
+                </li>
+                <li><a href="#presentacion">Sobre nosotros</a></li>
+                <li><a href="#form-consulta">Contactanos</a></li>
+                <div class="row">
+                  <div class="col-1">
+                    <a href="https://www.facebook.com/dirtyjacket" target="_blank"><i class="lab la-facebook-f"></i></a>
+                  </div>
+                  <div class="col-1">
+                    <a href="https://www.instagram.com" target="_blank"><i class="lab la-instagram"></i></a>
+                  </div>
+                  <div class="col-1">
+                    <a href="mailto:dariocontrerasn42@gmail.com"> <i class="lab la-google-plus"></i></a>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- copyright -->
+
+    <div class="row m-auto" id="copyright">
+      <div class="col">
+        <div class="text-center">Copyright © fiveller.com. Todos los derechos reservados | Diseñado por:
+          grupo5design.com
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
